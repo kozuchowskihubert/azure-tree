@@ -64,7 +64,7 @@ export default function Dojazd() {
                   <strong>Szkółka Drzew i Krzewów Rydzyny</strong><br />
                   ul. Górna 8<br />
                   95-200 Rydzyny<br />
-                  woj. wielkopolskie
+                  woj. łódzkie
                 </p>
                 <a 
                   href="https://www.google.com/maps/search/ul.+Górna+8+95-200+Rydzyny" 
