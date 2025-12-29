@@ -674,6 +674,14 @@
     grid-template-columns: 1fr;
   }
   
+  .featureCard {
+    border-radius: var(--radius-lg);
+  }
+  
+  .featureContent {
+    padding: 1.5rem;
+  }
+  
   .products {
     grid-template-columns: 1fr;
   }
