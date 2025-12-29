@@ -6,16 +6,20 @@ export default function HeroSlider() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const videoRef = useRef(null)
 
-  // Mix of videos and images for the hero slider
+  // Mix of videos and images for the hero slider - przeplatane dla lepszego efektu
   const slides = useMemo(() => [
-    { type: 'video', src: '/videos/grok-video-0c7a3608-3be8-49d9-9afb-2ab6876505c7.mp4', title: 'Szkółka Drzew i Krzewów Rydzyny', subtitle: 'Profesjonalna szkółka z wieloletnim doświadczeniem' },
-    { type: 'video', src: '/videos/grok-video-0c7a3608-3be8-49d9-9afb-2ab6876505c7-2.mp4', title: 'Najwyższa jakość roślin', subtitle: 'Drzewa, krzewy i rośliny ozdobne dla Twojego ogrodu' },
-    { type: 'video', src: '/videos/grok-video-0c7a3608-3be8-49d9-9afb-2ab6876505c7-3.mp4', title: 'Tuje żywopłotowe Smaragd', subtitle: 'Idealne na żywopłoty i ogrodzenia naturalne' },
-    { type: 'image', src: '/images/gallery/475848071_661402346214157_3106701970656297283_n.jpg', title: 'Choinki świąteczne', subtitle: 'Piękne jodły kaukaskie i świerki - tradycja od lat!' },
+    { type: 'image', src: '/images/gallery/475848071_661402346214157_3106701970656297283_n.jpg', title: 'Szkółka Drzew i Krzewów Rydzyny', subtitle: 'Profesjonalna szkółka z wieloletnim doświadczeniem' },
     { type: 'video', src: '/videos/Download.mp4', title: 'Krzewy ozdobne', subtitle: 'Szeroki wybór krzewów do każdego ogrodu' },
-    { type: 'image', src: '/images/gallery/596493401_25323224600639767_2865473862037379473_n.jpg', title: 'Drzewa alejowe', subtitle: 'Profesjonalne nasadzenia dla miast i osiedli' },
+    { type: 'image', src: '/images/0F2B4C33-4544-4298-939C-AD2A403889FC_1_102_o.jpeg', title: 'Tuje Smaragd', subtitle: 'Idealne na żywopłoty i ogrodzenia' },
+    { type: 'video', src: '/videos/grok-2-short.mp4', title: 'Najwyższa jakość roślin', subtitle: 'Drzewa, krzewy i rośliny ozdobne dla Twojego ogrodu' },
+    { type: 'image', src: '/images/gallery/596493401_25323224600639767_2865473862037379473_n.jpg', title: 'Choinki świąteczne', subtitle: 'Piękne jodły i świerki na Boże Narodzenie' },
     { type: 'video', src: '/videos/Download-2.mp4', title: 'Rośliny ozdobne', subtitle: 'Bogaty wybór roślin dla Twojego ogrodu marzeń' },
-    { type: 'image', src: '/images/gallery/498527797_9794114537310691_3816962558267444035_n.jpg', title: 'Twój ogród z dostawą pod drzwi', subtitle: 'Dowozimy rośliny na terenie całej Polski' },
+    { type: 'image', src: '/images/1A0C7254-47A5-488D-984A-29F8FD326FF3_1_102_o.jpeg', title: 'Drzewa liściaste', subtitle: 'Klony, dęby, buki i wiele innych' },
+    { type: 'video', src: '/videos/grok-3-short.mp4', title: 'Tuje żywopłotowe', subtitle: 'Naturalne ogrodzenia dla Twojego ogrodu' },
+    { type: 'image', src: '/images/gallery/498527797_9794114537310691_3816962558267444035_n.jpg', title: 'Dostawa pod drzwi', subtitle: 'Dowozimy rośliny na terenie całej Polski' },
+    { type: 'video', src: '/videos/Download-3.mp4', title: 'Profesjonalna obsługa', subtitle: 'Doradztwo i pomoc w wyborze roślin' },
+    { type: 'image', src: '/images/3F31810A-B923-4364-AC26-517F01149789_1_102_o.jpeg', title: 'Krzewy kwitnące', subtitle: 'Hortensje, róże, azalie i rododendrony' },
+    { type: 'video', src: '/videos/Download-4.mp4', title: 'Nasza pasja', subtitle: 'Od pokoleń uprawiamy najpiękniejsze rośliny' },
   ], [])
 
   useEffect(() => {
