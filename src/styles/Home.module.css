@@ -212,7 +212,7 @@
 
 .featureCard {
   background: var(--color-surface);
-  border-radius: var(--radius-2xl);
+  border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
@@ -251,7 +251,7 @@
 }
 
 .featureContent {
-  padding: 1.5rem;
+  padding: 1.75rem;
   text-align: center;
 }
 
