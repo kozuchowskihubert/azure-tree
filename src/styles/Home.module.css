@@ -95,15 +95,6 @@
   transition: all var(--transition-normal);
 }
 
-.photoItem:nth-child(1) {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.photoItem:nth-child(5) {
-  grid-column: span 2;
-}
-
 .photoItem img {
   width: 100%;
   height: 100%;
@@ -652,15 +643,6 @@
   .photoGrid {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  .photoItem:nth-child(1) {
-    grid-column: span 2;
-    grid-row: span 1;
-  }
-
-  .photoItem:nth-child(5) {
-    grid-column: span 1;
-  }
   
   .aboutGrid {
     grid-template-columns: 1fr;
@@ -675,15 +657,6 @@
   .aboutImage {
     height: 350px;
   }
-
-  .deliveryGrid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .deliveryImage {
-    order: -1;
-  }
 }
 
 @media (max-width: 768px) {
@@ -691,20 +664,8 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .photoItem:nth-child(1) {
-    grid-column: span 2;
-  }
-
-  .photoItem:nth-child(5) {
-    grid-column: span 2;
-  }
-  
-  .deliveryBadge {
-    position: relative;
-    bottom: 0;
-    margin-top: 1rem;
-    transform: none;
-    left: 0;
+  .photoGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -718,6 +679,7 @@
   }
   
   .photoGrid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
   

@@ -40,7 +40,6 @@ export default function Galeria() {
     { src: '/images/gallery/597575318_25323224130639814_4815702639010843478_n.jpg', alt: 'Krzewy', title: 'Krzewy' },
     { src: '/images/gallery/599535217_25323224387306455_4450463131101867487_n.jpg', alt: 'Oferta', title: 'Nasza oferta' },
     { src: '/images/gallery/image.png', alt: 'Voucher', title: 'Voucher podarunkowy' },
-    { src: '/images/samochod-dowoz.png', alt: 'Dostawa', title: 'Samochód dostawczy' },
   ]
 
   // Filmy - wszystkie filmy z /public/videos/

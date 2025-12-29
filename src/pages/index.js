@@ -29,7 +29,6 @@ export default function Home() {
     { src: '/images/89295277-22DB-481A-8227-B9DB5D6492BF_1_102_o.jpeg', alt: 'Rośliny do ogrodu' },
     { src: '/images/8A9FBFB6-79F3-4B1D-AEBB-AF830E3B41D7_1_102_o.jpeg', alt: 'Tuje na żywopłot' },
     { src: '/images/8EAB3E97-CB62-471D-AAA8-C1F74ADC849A_1_102_o.jpeg', alt: 'Szkółka' },
-    { src: '/images/samochod-dowoz.png', alt: 'Dostawa roślin' },
   ]
 
   const features = [
@@ -82,6 +81,29 @@ export default function Home() {
       {/* Full-screen Hero Video/Image Slider */}
       <HeroSlider />
 
+      {/* Features Section */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>Co oferujemy?</h2>
+            <p className={styles.sectionSubtitle}>
+              Bogaty wybór roślin dla profesjonalistów i hobbystów
+            </p>
+          </div>
+          <div className={styles.features}>
+            {features.map((feature, index) => (
+              <div key={index} className={styles.featureCard}>
+                <div className={styles.featureImageWrapper}>
+                  <img src={feature.image} alt={feature.title} className={styles.featureImage} />
+                </div>
+                <h3 className={styles.featureTitle}>{feature.title}</h3>
+                <p className={styles.featureText}>{feature.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Photo Gallery Section */}
       <section className={styles.gallerySection}>
         <div className={styles.container}>
@@ -105,29 +127,6 @@ export default function Home() {
             <Link href="/galeria" className={styles.btnOutline}>
               Zobacz pełną galerię 🖼️
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className={styles.section}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Co oferujemy?</h2>
-            <p className={styles.sectionSubtitle}>
-              Bogaty wybór roślin dla profesjonalistów i hobbystów
-            </p>
-          </div>
-          <div className={styles.features}>
-            {features.map((feature, index) => (
-              <div key={index} className={styles.featureCard}>
-                <div className={styles.featureImageWrapper}>
-                  <img src={feature.image} alt={feature.title} className={styles.featureImage} />
-                </div>
-                <h3 className={styles.featureTitle}>{feature.title}</h3>
-                <p className={styles.featureText}>{feature.text}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -181,42 +180,6 @@ export default function Home() {
                 <li>Konkurencyjne ceny</li>
                 <li>Fachowe doradztwo</li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Delivery Section */}
-      <section className={styles.deliverySection}>
-        <div className={styles.container}>
-          <div className={styles.deliveryGrid}>
-            <div className={styles.deliveryContent}>
-              <h2 className={styles.deliveryTitle}>🚚 Dowozimy rośliny!</h2>
-              <p className={styles.deliveryText}>
-                Oferujemy profesjonalny transport roślin bezpośrednio pod Twój dom. 
-                Nasze specjalistyczne pojazdy gwarantują bezpieczny przewóz nawet największych drzew.
-              </p>
-              <ul className={styles.deliveryList}>
-                <li>✅ Dostawa na terenie całej Polski</li>
-                <li>✅ Profesjonalny transport z zabezpieczeniem</li>
-                <li>✅ Możliwość rozładunku</li>
-                <li>✅ Elastyczne terminy dostawy</li>
-              </ul>
-              <div className={styles.deliveryContact}>
-                <p><strong>Zadzwoń i zamów dostawę:</strong></p>
-                <a href="tel:+48509724030" className={styles.deliveryPhone}>📞 509 724 030</a>
-              </div>
-            </div>
-            <div className={styles.deliveryImage}>
-              <img 
-                src="/images/samochod-dowoz.png" 
-                alt="Samochód dostawczy Szkółki Rydzyny" 
-                className={styles.deliveryImg}
-              />
-              <div className={styles.deliveryBadge}>
-                <span>DOWÓZ</span>
-                <span>na terenie całej Polski</span>
-              </div>
             </div>
           </div>
         </div>
