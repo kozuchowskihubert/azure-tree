@@ -73,7 +73,6 @@ export default function Home() {
     { image: '/images/C7FF3090-CD6D-4BB2-BD49-E87A1204BA39_1_102_o.jpeg', title: 'Hortensja', desc: 'Piękne kwiaty całe lato' },
     { image: '/images/CB30ED50-EE73-428C-9D13-0C4AD3A19B4C_1_102_o.jpeg', title: 'Rośliny ozdobne', desc: 'Upiększ swój ogród' },
     { image: '/images/EA1C2491-4F93-45B1-AFE7-329347AACC4E_1_102_o.jpeg', title: 'Drzewka formowane', desc: 'Starannie przycinane' },
-    { image: '/images/EAD8A72C-AAF2-4854-8BB9-4E3570200B6A_1_102_o.jpeg', title: 'Krzewy liściaste', desc: 'Różnorodność gatunków' },
   ]
 
   return (
