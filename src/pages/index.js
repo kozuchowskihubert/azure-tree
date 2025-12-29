@@ -25,7 +25,6 @@ export default function Home() {
     { src: '/images/7709BE4F-1237-476C-B3B6-2AA14A01F264_1_102_o.jpeg', alt: 'Sadzonki' },
     { src: '/images/gallery/498527797_9794114537310691_3816962558267444035_n.jpg', alt: 'Transport roślin' },
     { src: '/images/8089AD7F-29B2-4CD2-B11B-0EFCEFE3604E_1_102_o.jpeg', alt: 'Drzewa iglaste' },
-    { src: '/images/8886E289-0C2F-4B1A-A597-23596822049C_1_102_o.jpeg', alt: 'Krzewy liściaste' },
     { src: '/images/89295277-22DB-481A-8227-B9DB5D6492BF_1_102_o.jpeg', alt: 'Rośliny do ogrodu' },
     { src: '/images/8A9FBFB6-79F3-4B1D-AEBB-AF830E3B41D7_1_102_o.jpeg', alt: 'Tuje na żywopłot' },
     { src: '/images/8EAB3E97-CB62-471D-AAA8-C1F74ADC849A_1_102_o.jpeg', alt: 'Szkółka' },
