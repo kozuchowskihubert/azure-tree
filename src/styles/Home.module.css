@@ -315,4 +315,157 @@
   .sectionTitle {
     font-size: 1.75rem;
   }
+
+  .deliveryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .deliveryImage {
+    order: -1;
+  }
+
+  .deliveryTitle {
+    font-size: 1.75rem;
+  }
+}
+
+/* Delivery Section */
+.deliverySection {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.05) 0%, rgba(139, 195, 74, 0.08) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.deliverySection::before {
+  content: '🚚';
+  position: absolute;
+  font-size: 20rem;
+  opacity: 0.04;
+  top: 50%;
+  right: -5rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.deliveryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.deliveryContent {
+  padding: 2rem 0;
+}
+
+.deliveryTitle {
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  color: var(--color-primary-dark);
+  margin-bottom: 1.5rem;
+}
+
+.deliveryText {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.deliveryList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.deliveryList li {
+  font-size: 1.05rem;
+  padding: 0.5rem 0;
+  color: var(--color-text);
+}
+
+.deliveryContact {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  display: inline-block;
+}
+
+.deliveryContact p {
+  margin-bottom: 0.5rem;
+  color: var(--color-text-light);
+}
+
+.deliveryPhone {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.deliveryPhone:hover {
+  color: var(--color-primary-dark);
+}
+
+.deliveryImage {
+  position: relative;
+}
+
+.deliveryImg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+}
+
+.deliveryImg:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+.deliveryBadge {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-primary);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.deliveryBadge span:first-child {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.deliveryBadge span:last-child {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 992px) {
+  .deliveryGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .deliveryImage {
+    order: -1;
+  }
+
+  .deliveryBadge {
+    position: relative;
+    bottom: 0;
+    margin-top: 1rem;
+  }
 }

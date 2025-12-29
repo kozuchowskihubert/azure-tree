@@ -172,6 +172,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Delivery Section */}
+      <section className={styles.deliverySection}>
+        <div className={styles.container}>
+          <div className={styles.deliveryGrid}>
+            <div className={styles.deliveryContent}>
+              <h2 className={styles.deliveryTitle}>🚚 Dowozimy rośliny!</h2>
+              <p className={styles.deliveryText}>
+                Oferujemy profesjonalny transport roślin bezpośrednio pod Twój dom. 
+                Nasze specjalistyczne pojazdy gwarantują bezpieczny przewóz nawet największych drzew.
+              </p>
+              <ul className={styles.deliveryList}>
+                <li>✅ Dostawa na terenie całej Polski</li>
+                <li>✅ Profesjonalny transport z zabezpieczeniem</li>
+                <li>✅ Możliwość rozładunku</li>
+                <li>✅ Elastyczne terminy dostawy</li>
+              </ul>
+              <div className={styles.deliveryContact}>
+                <p><strong>Zadzwoń i zamów dostawę:</strong></p>
+                <a href="tel:+48509724030" className={styles.deliveryPhone}>📞 509 724 030</a>
+              </div>
+            </div>
+            <div className={styles.deliveryImage}>
+              <img 
+                src="/images/samochod-dowoz.png" 
+                alt="Samochód dostawczy Szkółki Rydzyny" 
+                className={styles.deliveryImg}
+              />
+              <div className={styles.deliveryBadge}>
+                <span>DOWÓZ</span>
+                <span>na terenie całej Polski</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className={styles.cta}>
         <h2 className={styles.ctaTitle}>Zapraszamy do współpracy!</h2>
