@@ -561,5 +561,176 @@
   .opinieGrid {
     grid-template-columns: 1fr;
   }
+
+  .page {
+    padding: 2.5rem 1rem;
+  }
+
+  .pageHeader {
+    margin-bottom: 2rem;
+  }
+
+  .pageTitle {
+    font-size: 1.75rem;
+  }
+
+  .pageSubtitle {
+    font-size: 1rem;
+  }
+
+  .categories {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .categoryImage {
+    height: 150px;
+    font-size: 4rem;
+  }
+
+  .categoryContent {
+    padding: 1.25rem;
+  }
+
+  .categoryTitle {
+    font-size: 1.1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .galleryItem {
+    font-size: 2.5rem;
+  }
+
+  .aboutContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .aboutImage {
+    height: 250px;
+    font-size: 5rem;
+    position: relative;
+    top: 0;
+    order: -1;
+  }
+
+  .aboutText h2 {
+    font-size: 1.4rem;
+  }
+
+  .timeline {
+    margin-top: 2rem;
+  }
+
+  .timelineItem {
+    gap: 1rem;
+  }
+
+  .timelineYear {
+    font-size: 1rem;
+    min-width: 60px;
+  }
+
+  .timelineContent {
+    padding-left: 1.25rem;
+  }
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contactCard {
+    padding: 1.25rem;
+  }
+
+  .contactCard h3 {
+    font-size: 1.1rem;
+  }
+
+  .formGroup label {
+    font-size: 0.9rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .mapSection {
+    margin-top: 2rem;
+  }
+
+  .mapContainer {
+    height: 300px;
+  }
+
+  .opinieCtaSection {
+    padding: 2rem 1rem;
+  }
+
+  .opinieCtaSection h2 {
+    font-size: 1.4rem;
+  }
+
+  .ctaButtonPrimary,
+  .ctaButtonSecondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 2rem 0.75rem;
+  }
+
+  .pageTitle {
+    font-size: 1.5rem;
+  }
+
+  .pageSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .categoryImage {
+    height: 120px;
+    font-size: 3rem;
+  }
+
+  .gallery {
+    gap: 0.35rem;
+  }
+
+  .galleryItem {
+    font-size: 2rem;
+    border-radius: 8px;
+  }
+
+  .aboutImage {
+    height: 200px;
+    font-size: 4rem;
+  }
+
+  .contactCard {
+    padding: 1rem;
+  }
+
+  .opinieCtaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaButtonPrimary,
+  .ctaButtonSecondary {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
 }
 
