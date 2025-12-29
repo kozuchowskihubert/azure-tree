@@ -24,26 +24,44 @@ export default function Galeria() {
   // Filmy - dodaj własne pliki do /public/videos/
   const videos = [
     { 
-      src: '/videos/Download.mp4', 
+      src: '/videos/grok-video-0c7a3608-3be8-49d9-9afb-2ab6876505c7.mp4', 
       poster: '/images/gallery/475848071_661402346214157_3106701970656297283_n.jpg',
+      title: 'Nasza szkółka',
+      description: 'Profesjonalna szkółka drzew i krzewów'
+    },
+    { 
+      src: '/videos/grok-video-0c7a3608-3be8-49d9-9afb-2ab6876505c7-2.mp4', 
+      poster: '/images/gallery/498527797_9794114537310691_3816962558267444035_n.jpg',
+      title: 'Piękne rośliny',
+      description: 'Bogaty wybór roślin ozdobnych'
+    },
+    { 
+      src: '/videos/grok-video-0c7a3608-3be8-49d9-9afb-2ab6876505c7-3.mp4', 
+      poster: '/images/gallery/596493401_25323224600639767_2865473862037379473_n.jpg',
+      title: 'Tuje i iglaki',
+      description: 'Idealne na żywopłoty'
+    },
+    { 
+      src: '/videos/Download.mp4', 
+      poster: '/images/gallery/596808713_25323224157306478_5363416883650563080_n.jpg',
       title: 'Spacer po szkółce',
       description: 'Zobacz naszą szkółkę z bliska'
     },
     { 
       src: '/videos/Download-2.mp4', 
-      poster: '/images/gallery/498527797_9794114537310691_3816962558267444035_n.jpg',
+      poster: '/images/gallery/597087615_25323224527306441_6840263767502556965_n.jpg',
       title: 'Nasze rośliny',
       description: 'Prezentacja naszych roślin'
     },
     { 
       src: '/videos/Download-3.mp4', 
-      poster: '/images/gallery/596493401_25323224600639767_2865473862037379473_n.jpg',
+      poster: '/images/gallery/597381623_25323224257306468_465821106525587879_n.jpg',
       title: 'W szkółce',
       description: 'Dzień w szkółce Rydzyny'
     },
     { 
       src: '/videos/Download-4.mp4', 
-      poster: '/images/gallery/596808713_25323224157306478_5363416883650563080_n.jpg',
+      poster: '/images/gallery/597575318_25323224130639814_4815702639010843478_n.jpg',
       title: 'Sezon choinkowy',
       description: 'Przygotowania do świąt'
     },
