@@ -1,34 +1,23 @@
 import Link from 'next/link'
 import Layout from '@/components/Layout'
-import ImageSlider from '@/components/ImageSlider'
+import HeroSlider from '@/components/HeroSlider'
 import styles from '@/styles/Home.module.css'
 
 export default function Home() {
-  const sliderImages = [
-    {
-      src: '/images/gallery/image.png',
-      alt: 'Voucher podarunkowy - Szkółka Rydzyny',
-      title: '🎁 Voucher Podarunkowy',
-      subtitle: 'Idealny prezent dla miłośników ogrodów - dostępny w naszej szkółce!'
-    },
-    {
-      src: '/images/gallery/475848071_661402346214157_3106701970656297283_n.jpg',
-      alt: 'Szkółka Rydzyny',
-      title: '🌲 Drzewa i Krzewy',
-      subtitle: 'Najwyższa jakość roślin do Twojego ogrodu'
-    },
-    {
-      src: '/images/gallery/596493401_25323224600639767_2865473862037379473_n.jpg',
-      alt: 'Choinki świąteczne',
-      title: '🎄 Choinki Świąteczne',
-      subtitle: 'Piękne jodły kaukaskie i świerki - tradycja od lat!'
-    },
-    {
-      src: '/images/gallery/498527797_9794114537310691_3816962558267444035_n.jpg',
-      alt: 'Rośliny ozdobne',
-      title: '🌿 Rośliny Ozdobne',
-      subtitle: 'Bogaty wybór roślin do Twojego ogrodu'
-    }
+  // Gallery images for the photo grid section
+  const galleryImages = [
+    { src: '/images/gallery/475848071_661402346214157_3106701970656297283_n.jpg', alt: 'Szkółka Rydzyny' },
+    { src: '/images/gallery/498527797_9794114537310691_3816962558267444035_n.jpg', alt: 'Rośliny ozdobne' },
+    { src: '/images/gallery/596493401_25323224600639767_2865473862037379473_n.jpg', alt: 'Choinki' },
+    { src: '/images/gallery/596493401_25323224600639767_2865473862037379473_n-2.jpg', alt: 'Choinki świąteczne' },
+    { src: '/images/gallery/596808713_25323224157306478_5363416883650563080_n.jpg', alt: 'Tuje' },
+    { src: '/images/gallery/596809175_25323224117306482_8963869732943613624_n.jpg', alt: 'Krzewy' },
+    { src: '/images/gallery/597087615_25323224527306441_6840263767502556965_n.jpg', alt: 'Rośliny' },
+    { src: '/images/gallery/597381623_25323224257306468_465821106525587879_n.jpg', alt: 'Drzewa' },
+    { src: '/images/gallery/597575318_25323224130639814_4815702639010843478_n.jpg', alt: 'Krzewy ozdobne' },
+    { src: '/images/gallery/599535217_25323224387306455_4450463131101867487_n.jpg', alt: 'Nasza oferta' },
+    { src: '/images/gallery/image.png', alt: 'Voucher podarunkowy' },
+    { src: '/images/samochod-dowoz.png', alt: 'Samochód dostawczy' },
   ]
 
   const features = [
@@ -73,31 +62,33 @@ export default function Home() {
 
   return (
     <Layout>
-      {/* Hero Section with Slider */}
-      <section className={styles.hero}>
-        <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>
-            Szkółka Drzew i Krzewów Rydzyny
-          </h1>
-          <p className={styles.heroSubtitle}>
-            Profesjonalna szkółka oferująca najwyższej jakości drzewa i krzewy ozdobne. 
-            Od lat dbamy o to, by Twój ogród był wyjątkowy.
-          </p>
-          <div className={styles.heroButtons}>
-            <Link href="/oferta" className={styles.btnPrimary}>
-              Zobacz ofertę 🌿
-            </Link>
-            <Link href="/kontakt" className={styles.btnSecondary}>
-              Zadzwoń: 509 724 030 📞
+      {/* Full-screen Hero Video/Image Slider */}
+      <HeroSlider />
+
+      {/* Photo Gallery Section */}
+      <section className={styles.gallerySection}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>📸 Nasza szkółka w obiektywie</h2>
+            <p className={styles.sectionSubtitle}>
+              Zobacz nasze drzewa, krzewy i realizacje ogrodowe
+            </p>
+          </div>
+          <div className={styles.photoGrid}>
+            {galleryImages.map((img, index) => (
+              <div key={index} className={styles.photoItem}>
+                <img src={img.src} alt={img.alt} loading="lazy" />
+                <div className={styles.photoOverlay}>
+                  <span>{img.alt}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={styles.galleryCta}>
+            <Link href="/galeria" className={styles.btnOutline}>
+              Zobacz pełną galerię 🖼️
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* Image Slider */}
-      <section className={styles.sliderSection}>
-        <div className={styles.container}>
-          <ImageSlider images={sliderImages} />
         </div>
       </section>
 

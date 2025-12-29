@@ -95,6 +95,102 @@
   background: var(--color-background);
 }
 
+/* Photo Gallery Section */
+.gallerySection {
+  padding: 5rem 1.5rem;
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-background) 100%);
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.photoItem {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.photoItem:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.photoItem:nth-child(5) {
+  grid-column: span 2;
+}
+
+.photoItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.photoItem:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.photoItem:hover img {
+  transform: scale(1.1);
+}
+
+.photoOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 1rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
+  opacity: 0;
+  transition: var(--transition-normal);
+}
+
+.photoItem:hover .photoOverlay {
+  opacity: 1;
+}
+
+.photoOverlay span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.galleryCta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius);
+  transition: var(--transition-normal);
+  text-decoration: none;
+}
+
+.btnOutline:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
 /* Sections */
 .section {
   padding: 5rem 1.5rem;
@@ -283,6 +379,19 @@
   .products {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .photoGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .photoItem:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .photoItem:nth-child(5) {
+    grid-column: span 1;
+  }
   
   .aboutGrid {
     grid-template-columns: 1fr;
@@ -314,6 +423,15 @@
   
   .sectionTitle {
     font-size: 1.75rem;
+  }
+
+  .photoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photoItem:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
   }
 
   .deliveryGrid {
